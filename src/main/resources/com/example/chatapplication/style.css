@@ -1,0 +1,277 @@
+/* General background */
+.root {
+    -fx-background-color: linear-gradient(to bottom right, #00172D, #2c3282); /* medium blue → very light blue */
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+/* Title */
+.label {
+    -fx-text-fill: #ecf0f1;
+    -fx-font-size: 14px;
+}
+
+.titlePage {
+    -fx-font-size: 80px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f1c40f;   /* bright golden yellow */
+    -fx-font-family: "Segoe UI", "Arial Black", sans-serif;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 8, 0, 2, 2);
+    -fx-padding: 10;
+    -fx-alignment: center;
+}
+.titlePage-rest {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f1c40f;   /* bright golden yellow */
+    -fx-font-family: "Segoe UI", "Arial Black", sans-serif;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 8, 0, 2, 2);
+    -fx-padding: 10;
+    -fx-alignment: center;
+}
+
+/* Main App Title (specific label by coordinates) */
+.label[layoutX="381.0"][layoutY="197.0"] {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+/* TextFields */
+.text-field {
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #3498db;
+    -fx-border-width: 1.2;
+    -fx-padding: 6 10;
+    -fx-font-size: 16px;
+    -fx-background-color: #ecf0f1;
+}
+
+.text-field:focused {
+    -fx-border-color: #2980b9;
+    -fx-border-width: 2;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(41,128,185,0.5), 8, 0.3, 0, 0);
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12;
+    -fx-padding: 14 28;
+    -fx-min-width: 160px;
+    -fx-min-height: 50px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0, 2, 2);
+}
+
+/* Smaller button variant */
+.btn {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12;
+    -fx-padding: 7 20;
+    -fx-min-width: 80px;
+    -fx-min-height: 20px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0, 1, 1);
+}
+
+.btn:hover {
+    -fx-background-color: #2980b9;
+}
+
+.btn:pressed {
+    -fx-background-color: #1f618d;
+}
+
+/* Hover effect */
+.button:hover {
+    -fx-opacity: 0.9;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-background-color: #2980b9;
+}
+
+/* Pressed effect */
+.button:pressed {
+    -fx-opacity: 0.8;
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+    -fx-background-color: #1f618d;
+}
+
+.back-button {
+    -fx-border-color: yellow;
+    -fx-background-color: #00172D;
+    -fx-text-fill: orange;
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 7;
+    -fx-background-radius: 7;
+    -fx-padding: 14 28;
+    -fx-min-width: 40px;
+    -fx-min-height: 15px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0, 2, 2);
+}
+.back-button:hover {
+    -fx-opacity: 0.9;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-background-color: #2980b9;
+}
+
+/* Pressed effect */
+.back-button:pressed {
+    -fx-opacity: 0.8;
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+    -fx-background-color: #1f618d;
+}
+
+/* Special button for switching (like "Register here" or "Login instead") */
+#loginSwitch {
+    -fx-background-color: transparent;
+    -fx-text-fill: #f1c40f;
+    -fx-underline: true;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+#loginSwitch:hover {
+    -fx-text-fill: #f39c12;
+}
+
+
+/* Create Room button */
+#createRoom {
+    -fx-background-color: linear-gradient(to right, #00c6ff, #0072ff);
+    -fx-border-radius:6px;
+    -fx-font-size : 17px;
+}
+
+/* Join Room button */
+#joinRoom {
+    -fx-background-color: linear-gradient(to right, #ff512f, #dd2476);
+    -fx-border-radius:6px;
+    -fx-font-size : 17px;
+}
+
+/* Enter Room button */
+#enterRoom {
+    -fx-background-color: linear-gradient(to right, #43e97b, #38f9d7);
+    -fx-border-radius:6px;
+    -fx-font-size : 17px;
+}
+
+#helpButton {
+    -fx-background-color: linear-gradient(to right, #f53caa, #b11277);
+    -fx-border-radius:6px;
+    -fx-font-size : 17px;
+}
+#welcomeText {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;   /* bright yellow */
+}
+#agreeConditionBox {
+    -fx-text-fill: white;
+}
+/* MenuButton (dropdowns) */
+.menu-button {
+    -fx-background-color: #34495e; /* dark gray-blue */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #3498db;
+    -fx-border-width: 1.2;
+    -fx-padding: 6 12;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 6, 0, 2, 2);
+}
+
+.menu-button:hover {
+    -fx-background-color: #2c3e50; /* darker shade */
+}
+
+.menu-button:showing {
+    -fx-background-color: #2980b9; /* highlight when open */
+}
+
+/* Menu items inside dropdown */
+.menu-item {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+}
+
+.menu-item:hover {
+    -fx-background-color: #3498db; /* blue highlight */
+    -fx-text-fill: white;
+}
+.showLabel {
+    -fx-font-size: 14px;        /* font size */
+    -fx-font-weight: bold;      /* bold text */
+    -fx-text-fill: #2c3e50;     /* dark gray-blue text */
+    -fx-padding: 5px;          /* padding inside the label */
+    -fx-background-color: #ecf0f1; /* light background */
+    -fx-background-radius: 8px; /* rounded corners */
+    -fx-border-color: #3498db;  /* blue border */
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+}
+#searchBar {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #5865f2;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font-size: 14px;
+    -fx-padding: 6 10;
+    -fx-pref-height: 50px;
+    -fx-border-width: 3;
+}
+
+#searchBar:focused {
+    -fx-border-color: #5865f2;
+    -fx-border-width : 4;
+    -fx-effect: dropshadow(gaussian, rgba(88, 101, 242, 0.4), 4, 0.3, 0, 0);
+}
+
+#searchbtn {
+    -fx-background-color: #5865f2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0.3, 0, 1);
+    -fx-min-height: 34px;
+    -fx-pref-height: 49px;
+    -fx-max-height: 49px;
+    -fx-padding: 0 16;
+}
+
+#searchbtn:hover {
+    -fx-background-color: #4752c4;
+}
+
+#searchbtn:pressed {
+    -fx-background-color: #3c45a5;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="702.0" prefWidth="895.0" styleClass="anchor-pane" stylesheets="@chatRoom.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chatapplication.chatRoomUI">
+    <VBox layoutX="-3.0" layoutY="2.0" prefHeight="700.0" prefWidth="197.0" styleClass="sidebar">
+        <Label alignment="CENTER" prefHeight="264.0" prefWidth="198.0" styleClass="sidebar-title" text="👥   Chat Rooms" />
+        <Button mnemonicParsing="false" onAction="#generalPage" prefHeight="230.0" prefWidth="198.0" styleClass="sidebar-button" text="General">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin></Button>
+        <Button mnemonicParsing="false" onAction="#rulesPage" prefHeight="230.0" prefWidth="198.0" styleClass="sidebar-button" text="Rules">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin></Button>
+        <Button mnemonicParsing="false" onAction="#announcementsPage" prefHeight="235.0" prefWidth="198.0" styleClass="sidebar-button" text="Announcements">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0d006e" height="29.0" stroke="TRANSPARENT" strokeType="INSIDE" width="200.0">
+         <VBox.margin>
+            <Insets top="50.0" />
+         </VBox.margin>
+      </Rectangle>
+      <Button mnemonicParsing="false" onAction="#settings" prefHeight="210.0" prefWidth="182.0" styleClass="leave-room-button" text="Settings">
+         <VBox.margin>
+            <Insets left="9.0" top="10.0" />
+         </VBox.margin>
+      </Button>
+        <Label fx:id="onlineShow" alignment="CENTER" prefHeight="243.0" prefWidth="198.0" styleClass="you-online" text="      You &#10;🟡 Online">
+            <VBox.margin>
+                <Insets top="220.0" />
+            </VBox.margin>
+        </Label>
+    </VBox>
+    <Label fx:id="title" alignment="CENTER" layoutX="194.0" layoutY="1.0" prefHeight="88.0" prefWidth="705.0" styleClass="title" stylesheets="@chatRoom.css" text="General room" />
+    <ScrollPane fx:id="chatScroll" fitToWidth="true" hbarPolicy="NEVER" layoutX="199.0" layoutY="92.0" pannable="false" prefHeight="507.0" prefWidth="696.0" vbarPolicy="AS_NEEDED">
+        <content>
+            <VBox fx:id="chatBox" prefHeight="0.0" prefWidth="694.0" spacing="0.0" styleClass="chat-label" stylesheets="@chatRoom.css" />
+        </content>
+    </ScrollPane>
+
+    <Button layoutX="770.0" layoutY="26.0" mnemonicParsing="false" onAction="#leaveRoom" prefHeight="38.0" prefWidth="116.0" styleClass="leave-room-button" text="↩️ Exit room" />
+    <TextField fx:id="textSendField" layoutX="199.0" layoutY="610.0" prefHeight="38.0" prefWidth="650.0" styleClass="textbar" />
+    <Button layoutX="852.0" layoutY="610.0" mnemonicParsing="false" onAction="#sendMsg" onKeyPressed="#sendMsg" prefHeight="38.0" prefWidth="43.0" styleClass="send-button" text="➡">
+        <font>
+          <Font size="15.0" />
+        </font>
+    </Button>
+</AnchorPane>

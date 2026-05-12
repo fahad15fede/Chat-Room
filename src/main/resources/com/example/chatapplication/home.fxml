@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="900.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chatapplication.homeController">
+   <padding>
+      <Insets bottom="30.0" right="20.0" />
+   </padding>
+   <children>
+      <Button layoutX="772.0" layoutY="25.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="109.0" text="Log-out" />
+      <Label fx:id="welcomeText" alignment="CENTER" layoutX="67.0" layoutY="26.0" prefHeight="42.0" prefWidth="167.0" stylesheets="@style.css" text="Welcome, Fahad" />
+      <Label fx:id="welcomeText1" alignment="CENTER" layoutX="170.0" layoutY="99.0" prefHeight="117.0" prefWidth="638.0" styleClass="titlePage" text="Chat App Room">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Button fx:id="helpButton" layoutX="502.0" layoutY="460.0" mnemonicParsing="false" onAction="#helpTempalate" prefHeight="143.0" prefWidth="160.0" text="Help" />
+      <Button fx:id="createRoom" layoutX="264.0" layoutY="272.0" mnemonicParsing="false" onAction="#createRoomPage" prefHeight="143.0" prefWidth="160.0" text="Create Room" />
+      <Button fx:id="joinRoom" layoutX="502.0" layoutY="270.0" mnemonicParsing="false" onAction="#joinRoomPage" prefHeight="143.0" prefWidth="160.0" text="Join Room" />
+      <Button fx:id="enterRoom" layoutX="264.0" layoutY="462.0" mnemonicParsing="false" onAction="#enterRoomPage" prefHeight="138.0" prefWidth="160.0" text="Enter Room" />
+   </children>
+</AnchorPane>

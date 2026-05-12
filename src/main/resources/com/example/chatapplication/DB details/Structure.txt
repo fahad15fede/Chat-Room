@@ -1,0 +1,33 @@
+src/main/java/com/example/chatapplication/
+│
+├── Main.java                     # entry point, loads login.fxml
+│
+├── controller/                   # all controllers for FXML
+│   ├── LoginController.java
+│   ├── RegisterController.java
+│   ├── HomeController.java
+│   ├── RoomController.java
+│   ├── ChatController.java
+│
+├── dao/                          # DB access (DAO = Data Access Object)
+│   ├── UserDAO.java
+│   ├── RoomDAO.java
+│   ├── MessageDAO.java
+│   └── MembershipDAO.java
+│
+├── db/
+│   └── DatabaseConnection.java   # JDBC connection (PostgreSQL or MySQL)
+│
+├── model/                        # plain objects (data models)
+│   ├── User.java
+│   ├── Room.java
+│   ├── Message.java
+│   └── Membership.java
+│
+├── session/
+│   └── UserSession.java          # holds logged-in user (global session)
+│
+└── util/
+    └── SceneSwitcher.java        # optional helper for switching scenes
+
+

@@ -1,0 +1,19 @@
+-- Disable foreign key checks (important so you can delete in any order)
+PRAGMA foreign_keys = OFF;
+
+-- If you're using MySQL instead of SQLite, use:
+-- SET FOREIGN_KEY_CHECKS = 0;
+
+-- 🧱 Delete from child tables first
+DELETE FROM messages;
+DELETE FROM memberships;
+
+-- 🏠 Then from parent tables
+DELETE FROM rooms;
+DELETE FROM users;
+
+-- ✅ Re-enable foreign key checks
+PRAGMA foreign_keys = ON;
+
+-- For MySQL again:
+-- SET FOREIGN_KEY_CHECKS = 1;

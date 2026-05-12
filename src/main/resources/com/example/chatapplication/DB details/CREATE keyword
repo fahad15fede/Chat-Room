@@ -1,0 +1,49 @@
+-- ========================================
+-- TABLE: users
+-- ========================================
+CREATE TABLE public.users (
+    user_id bigserial PRIMARY KEY,
+    username varchar(50) UNIQUE NOT NULL,
+    password varchar(100) NOT NULL
+);
+
+-- ========================================
+-- TABLE: rooms
+-- ========================================
+CREATE TABLE public.rooms (
+    room_id bigserial PRIMARY KEY,
+    room_name varchar(100) NOT NULL,
+    room_type varchar(50),
+    location varchar(100),
+    max_members integer,
+    age_range varchar(50),
+    room_description text,
+    rules text,  -- fixed per room
+    created_at timestamp without time zone DEFAULT NOW(),
+    room_passkey varchar(255)
+);
+
+-- ========================================
+-- TABLE: membership
+-- ========================================
+CREATE TABLE public.membership (
+    member_id bigserial PRIMARY KEY,
+    room_id bigint NOT NULL REFERENCES public.rooms(room_id) ON DELETE CASCADE,
+    user_id bigint NOT NULL REFERENCES public.users(user_id) ON DELETE CASCADE,
+    joined_at timestamp without time zone DEFAULT NOW(),
+    is_active boolean DEFAULT TRUE,
+    is_leader boolean DEFAULT FALSE,
+    CONSTRAINT unique_user_room UNIQUE (room_id, user_id)
+);
+
+-- ========================================
+-- TABLE: messages
+-- ========================================
+CREATE TABLE public.messages (
+    msg_id bigserial PRIMARY KEY,
+    user_id bigint NOT NULL REFERENCES public.users(user_id) ON DELETE CASCADE,
+    room_id bigint NOT NULL REFERENCES public.rooms(room_id) ON DELETE CASCADE,
+    msg_text text NOT NULL,
+    msg_type varchar(20) DEFAULT 'chat' CHECK (msg_type IN ('chat', 'announcement')),
+    sent_at timestamp without time zone DEFAULT NOW()
+);

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="380.0" prefWidth="520.0" styleClass="anchor-pane" stylesheets="@chatRoom.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chatapplication.ruleDialogController">
+
+    <VBox alignment="TOP_CENTER" spacing="20" AnchorPane.bottomAnchor="25" AnchorPane.leftAnchor="25" AnchorPane.rightAnchor="25" AnchorPane.topAnchor="20">
+
+        <!-- Title -->
+        <Label prefHeight="34.0" prefWidth="97.0" styleClass="textbar" text="Room Rules" />
+
+        <!-- Rules Box -->
+        <TextArea fx:id="rulesText" editable="false" prefHeight="220" prefWidth="470" style="-fx-font-family: 'Poppins'; -fx-font-size: 15px; -fx-font-weight: bold; -fx-control-inner-background: #0F2C85; -fx-text-fill: #FFFFFF; -fx-border-color: #FFD700; -fx-border-width: 3; -fx-border-radius: 8; -fx-background-radius: 8; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 6, 0, 0, 2);" text="No spamming, be respectful, follow community guidelines..." wrapText="true" />
+
+        <!-- Buttons -->
+        <HBox alignment="CENTER_RIGHT" spacing="15">
+            <Button fx:id="closeButton" onAction="#closeDialog" styleClass="send-button" text="Close" />
+            <Button fx:id="editButton" onAction="#editDialog" styleClass="send-button" text="Edit" />
+            <Button fx:id="saveButton" disable="true" onAction="#onSaveClicked" styleClass="send-button" text="Save" />
+        </HBox>
+
+    </VBox>
+</AnchorPane>

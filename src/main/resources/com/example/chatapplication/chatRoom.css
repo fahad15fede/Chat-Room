@@ -1,0 +1,256 @@
+/* ──────────────── MAIN BACKGROUND (ANCHORPANE) ──────────────── */
+.anchor-pane {
+  -fx-background-color: linear-gradient(to bottom, #0d006e, #2038c2, #4b63ff);  /* dark → medium → light royal blue */     /* thin, elegant border */
+}
+
+/* ──────────────── TITLE BAR ──────────────── */
+.title {
+  -fx-background-color: #0d006e;   /* royal blue */
+  -fx-text-fill: #FFD700;          /* bright gold */
+  -fx-font-family: "Poppins";
+  -fx-font-size: 36px;
+  -fx-font-weight: bold;
+  -fx-alignment: center;
+  -fx-padding: 14 20 14 20;
+  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 6, 0, 0, 2);
+  -fx-border-color: #FFD700;
+  -fx-border-width: 3 3 3 2;
+  -fx-background-radius: 3;
+}
+
+/* ──────────────── SIDEBAR TITLE ──────────────── */
+.sidebar-title {
+  -fx-background-color: #0F2C85;
+  -fx-text-fill: #FFD700;
+  -fx-font-family: "Poppins";
+  -fx-font-size: 20px;
+  -fx-font-weight: bold;
+  -fx-alignment: center;
+  -fx-padding: 20 0 20 0;
+  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0, 0, 2);
+  -fx-letter-spacing: 1px;
+  -fx-border-color: #FFD700;
+  -fx-border-width: 4 3 4 7;
+  -fx-background-radius: 3;
+}
+
+/* ──────────────── SIDEBAR BUTTONS ──────────────── */
+.sidebar-button {
+  -fx-background-color: #0F2C85;
+  -fx-text-fill: #FFD700;
+  -fx-font-family: "Poppins";
+  -fx-font-size: 14px;
+  -fx-font-weight: bold;
+  -fx-alignment: center-left;
+  -fx-padding: 5 0 0 25;
+  -fx-background-radius: 5;
+  -fx-border-color: #FFD700;
+  -fx-border-width: 3 2 3 1;
+  -fx-border-radius: 2px;
+  -fx-cursor: hand;
+}
+
+.sidebar-button:hover {
+  -fx-background-color: #173EB8;
+  -fx-text-fill: #FFF45A;  /* very bright yellow-gold */
+}
+
+.sidebar-button:pressed {
+  -fx-background-color: #0B1F63;
+  -fx-text-fill: #FFF8A0;  /* soft light gold */
+}
+
+/* ──────────────── SIDEBAR CONTAINER ──────────────── */
+.sidebar {
+  -fx-background-color: #0d006e;
+}
+
+/* ──────────────── LEAVE ROOM BUTTON ──────────────── */
+.leave-room-button {
+  -fx-background-color: #FFD700;   /* bright gold */
+  -fx-text-fill: #0d006e;          /* royal blue text */
+  -fx-font-family: "Poppins";
+  -fx-font-size: 14px;
+  -fx-font-weight: bold;
+  -fx-padding: 0 0 0 0;
+  -fx-background-radius: 5;
+  -fx-border-radius: 5;
+  -fx-cursor: hand;
+  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 6, 0, 0, 2);
+}
+
+.leave-room-button:hover {
+  -fx-background-color: #FFEA4C;   /* brighter golden yellow */
+  -fx-text-fill: #0F2C85;
+}
+
+.leave-room-button:pressed {
+  -fx-background-color: #E6C200;   /* deeper gold when pressed */
+  -fx-text-fill: #081B63;
+}
+
+/* ──────────────── MESSAGE INPUT BAR ──────────────── */
+.textbar {
+  -fx-background-color: #FFFACD;   /* very light yellow background */
+  -fx-text-fill: #0d006e;          /* royal blue text */
+  -fx-font-family: "Poppins";
+  -fx-font-size: 14px;
+  -fx-font-weight: bold;
+  -fx-border-color: #FFD700;       /* golden border */
+  -fx-border-width: 4 3 4 4;
+  -fx-background-radius: 10;
+  -fx-border-radius: 8;
+  -fx-prompt-text-fill: #857DC4;
+  -fx-padding: 3 3 3 3;
+}
+
+.textbar:focused {
+  -fx-background-color: #FFFDD0;   /* lighter yellow when focused */
+  -fx-border-color: #FFEA4C;       /* bright golden border on focus */
+  -fx-text-fill: #0F2C85;
+}
+/* ──────────────── SEND BUTTON ──────────────── */
+.send-button {
+  -fx-background-color: #FFD83D;     /* bright gold base */
+  -fx-text-fill: #0d006e;            /* royal blue text/icon */
+  -fx-font-family: "Poppins";
+  -fx-font-size: 16px;
+  -fx-font-weight: bold;
+  -fx-background-radius: 8;          /* smooth rounding */
+  -fx-border-radius: 8;
+  -fx-border-color: #bdab0b;         /* slightly darker gold outline */
+  -fx-border-width: 3;
+  -fx-cursor: hand;
+  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 6, 0, 0, 2);
+  -fx-padding: 4 10 4 10;
+}
+
+/* Hover effect */
+.send-button:hover {
+  -fx-background-color: #FFE766;     /* lighter gold */
+  -fx-text-fill: #173EB8;            /* brighter royal blue */
+}
+
+/* Pressed effect */
+.send-button:pressed {
+  -fx-background-color: #E6C200;     /* deeper gold */
+  -fx-text-fill: #081B63;            /* darker royal blue */
+  -fx-translate-y: 1;                /* subtle press animation */
+}
+/* ──────────────── CHAT MESSAGES ──────────────── */
+
+/* Common message label style */
+.chat-label {
+  -fx-font-family: "Poppins";
+  -fx-font-size: 14px;
+  -fx-font-weight: bold;
+  -fx-padding: 10 15 10 15;
+  -fx-background-radius: 10;
+  -fx-border-radius: 10;
+  -fx-wrap-text: true;
+  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 5, 0, 0, 2);
+}
+
+/* ──────────────── YOU ONLINE LABEL (STACKED TEXT) ──────────────── */
+.you-online {
+  -fx-background-color: #0F2C85;     /* royal blue background */
+  -fx-text-fill: #FFD83D;            /* bright gold text */
+  -fx-font-family: "Poppins";
+  -fx-font-size: 18px;
+  -fx-font-weight: bold;
+  -fx-alignment: center;
+  -fx-padding: 0 0 0 0;
+  -fx-line-spacing: 3;               /* space between “You” and “Online” */
+  -fx-border-color: #bdab0b;         /* gold top border */
+  -fx-border-width: 3 0 0 0;
+  -fx-background-radius: 5;
+  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0, 0, 2);
+}
+/* ──────────────── CIRCLE TEXT (LOGO / USER BADGE) ──────────────── */
+.circle-text {
+  -fx-background-color: #0F2C85;     /* royal blue interior */
+  -fx-text-fill: #FFD83D;            /* bright gold text */
+  -fx-font-family: "Poppins";
+  -fx-font-size: 16px;
+  -fx-font-weight: bold;
+  -fx-alignment: center;
+  -fx-background-radius: 50%;        /* fully rounded */
+  -fx-border-radius: 50%;
+  -fx-min-width: 42px;
+  -fx-min-height: 42px;
+  -fx-max-width: 42px;
+  -fx-max-height: 42px;
+  -fx-border-color: #B8860B;         /* dark golden border */
+  -fx-border-width: 3;
+  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 6, 0, 0, 2);
+}
+
+.circle-text2 {
+  -fx-background-color: #FFD83D;     /* royal blue interior */
+  -fx-text-fill: #0F2C85;            /* bright gold text */
+  -fx-font-family: "Poppins";
+  -fx-font-size: 16px;
+  -fx-font-weight: bold;
+  -fx-alignment: center;
+  -fx-background-radius: 50%;        /* fully rounded */
+  -fx-border-radius: 50%;
+  -fx-min-width: 42px;
+  -fx-min-height: 42px;
+  -fx-max-width: 42px;
+  -fx-max-height: 42px;
+  -fx-border-color: #0B1D6A;         /* dark golden border */
+  -fx-border-width: 3;
+  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 6, 0, 0, 2);
+}
+/* ──────────────── CHAT AREA STYLING ──────────────── */
+
+/* ScrollPane (main message area) */
+#chatScroll {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-border-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* Ensure the viewport shows the chatBox color (no white) */
+.scroll-pane,
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+/* VBox container for messages */
+#chatBox {
+    -fx-background-color: linear-gradient(to bottom, #0d006e, #2038c2, #4b63ff); /* royal blue gradient */
+    -fx-spacing: 10px;
+    -fx-padding: 15px;
+    -fx-background-radius: 8;
+}
+
+/* ──────────────── MESSAGE BUBBLES ──────────────── */
+
+/* Other users’ messages */
+.message-received {
+    -fx-background-color: #173EB8;      /* dark royal blue bubble */
+    -fx-text-fill: #FFD83D;             /* golden text */
+    -fx-border-color: #FFD83D;
+    -fx-border-width: 2;
+    -fx-background-radius: 10;
+    -fx-border-radius: 8;
+    -fx-padding: 10 15 10 15;
+}
+
+/* Your own messages */
+.message-sent {
+    -fx-background-color: #FFD83D;      /* golden bubble */
+    -fx-text-fill: #0d006e;             /* royal blue text */
+    -fx-border-color: #BDAB0B;
+    -fx-border-width: 2;
+    -fx-background-radius: 10;
+    -fx-border-radius: 8;
+    -fx-padding: 10 15 10 15;
+}
+
+
+
