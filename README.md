@@ -59,7 +59,7 @@ PostgreSQL stores user and messaging-related data
 JavaFX provides responsive desktop interaction and UI rendering
 ⚙️ Installation & Setup
 1️⃣ Clone Repository
-git clone https://github.com/yourusername/chatApplication.git
+git clone [https://github.com/yourusername/chatApplication.git](https://github.com/fahad15fede/Chat-Room.git)
 2️⃣ Open Project
 
 Open the project in:
